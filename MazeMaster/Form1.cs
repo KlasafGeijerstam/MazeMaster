@@ -62,6 +62,8 @@ namespace MazeMaster
                     break;
                 maze.DrawLine(Color.Blue,toDraw[i].Position,toDraw[i+1].Position);
             }
+            maze.DrawPixel(maze.StartNode.Position, Color.Purple);
+            maze.DrawPixel(maze.EndNode.Position, Color.Purple);
             BeginInvoke(new Action(() => {
                 pictureBox.Image = maze.CurrentImage;
             }));
@@ -73,7 +75,7 @@ namespace MazeMaster
             toDraw.Add(n);
             //DrawNodes();
             DrawNodesLines();
-            Thread.Sleep(100);
+            Thread.Sleep(10);
             n.Visited = true;
             if (n == maze.EndNode)
                 return true;

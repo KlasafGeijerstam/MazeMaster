@@ -9,3 +9,4 @@ c:\users\klas\documents\visual studio 2015\Projects\MazeMaster\MazeMaster\obj\De
 c:\users\klas\documents\visual studio 2015\Projects\MazeMaster\MazeMaster\bin\Debug\img\maze1.bmp
 c:\users\klas\documents\visual studio 2015\Projects\MazeMaster\MazeMaster\obj\Debug\MazeMaster.Form1.resources
 c:\users\klas\documents\visual studio 2015\Projects\MazeMaster\MazeMaster\bin\Debug\img\maze2.bmp
+C:\Users\Klas\documents\visual studio 2015\Projects\MazeMaster\MazeMaster\bin\Debug\img\maze3.bmp
