@@ -20,7 +20,7 @@ namespace MazeMaster
         private Node endNode;
         public Bitmap CurrentImage { get { return curImage; } }
         public Dictionary<Point, Node> Nodes { get { return nodes; } }
-
+        #region Properties
         public Color PathColor
         {
             get{ return pathColor; }
@@ -50,7 +50,7 @@ namespace MazeMaster
             get { return orgImage; }
             set{ orgImage = value; }
         }
-
+        #endregion
         public Maze(string mazeImage,int borderPad = 1)
         {
             orgImage = (Bitmap)Image.FromFile(mazeImage);
