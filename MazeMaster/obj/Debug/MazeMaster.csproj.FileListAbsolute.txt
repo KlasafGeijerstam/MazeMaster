@@ -1,0 +1,11 @@
+c:\users\klas\documents\visual studio 2015\Projects\MazeMaster\MazeMaster\bin\Debug\MazeMaster.exe.config
+c:\users\klas\documents\visual studio 2015\Projects\MazeMaster\MazeMaster\bin\Debug\MazeMaster.exe
+c:\users\klas\documents\visual studio 2015\Projects\MazeMaster\MazeMaster\bin\Debug\MazeMaster.pdb
+c:\users\klas\documents\visual studio 2015\Projects\MazeMaster\MazeMaster\obj\Debug\MazeMaster.csprojResolveAssemblyReference.cache
+c:\users\klas\documents\visual studio 2015\Projects\MazeMaster\MazeMaster\obj\Debug\MazeMaster.Properties.Resources.resources
+c:\users\klas\documents\visual studio 2015\Projects\MazeMaster\MazeMaster\obj\Debug\MazeMaster.csproj.GenerateResource.Cache
+c:\users\klas\documents\visual studio 2015\Projects\MazeMaster\MazeMaster\obj\Debug\MazeMaster.exe
+c:\users\klas\documents\visual studio 2015\Projects\MazeMaster\MazeMaster\obj\Debug\MazeMaster.pdb
+c:\users\klas\documents\visual studio 2015\Projects\MazeMaster\MazeMaster\bin\Debug\img\maze1.bmp
+c:\users\klas\documents\visual studio 2015\Projects\MazeMaster\MazeMaster\obj\Debug\MazeMaster.Form1.resources
+c:\users\klas\documents\visual studio 2015\Projects\MazeMaster\MazeMaster\bin\Debug\img\maze2.bmp
