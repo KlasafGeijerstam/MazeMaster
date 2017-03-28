@@ -78,8 +78,7 @@ public class MazeMaster extends JFrame {
         return false;
     }
 
-    private void drawNodesLines()
-    {
+    private void drawNodesLines(){
         maze.resetImage();
         for(int i = 0; i < toDraw.size(); i++)
         {

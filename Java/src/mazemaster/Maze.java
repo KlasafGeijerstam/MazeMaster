@@ -22,8 +22,8 @@ public class Maze {
     public Node startNode;
     public Node endNode;
 
-    public Maze(String mazeImage,int borderPad) throws IOException
-    {
+    public Maze(String mazeImage,int borderPad) throws IOException {
+
         orgImage = ImageIO.read(new File(mazeImage));
         curImage = ImageIO.read(new File(mazeImage));
         imageGraphics = curImage.getGraphics();
@@ -31,21 +31,20 @@ public class Maze {
         this.borderPad = borderPad;
     }
 
-    public void analyze()
-    {
-        for(int y = borderPad; y < orgImage.getHeight()-borderPad; y++)
-        {
-            for (int x = borderPad; x < orgImage.getWidth()-borderPad; x++)
-            {
+    public void analyze(){
+
+        for(int y = borderPad; y < orgImage.getHeight()-borderPad; y++){
+
+            for (int x = borderPad; x < orgImage.getWidth()-borderPad; x++){
                 int curColor = orgImage.getRGB(x,y);
 
                 if (curColor == borderColor)
                     continue;
 
-                if(curColor == pathColor)
-                {
-                    if(x == borderPad || x == orgImage.getWidth() - borderPad-1 || y == borderPad || y == orgImage.getHeight() - borderPad-1)
-                    {
+                if(curColor == pathColor){
+
+                    if(x == borderPad || x == orgImage.getWidth() - borderPad-1 || y == borderPad || y == orgImage.getHeight() - borderPad-1) {
+
                         Point pos = new Point(x, y);
                         Node node = new Node(pos);
                         node.endpoint = true;
@@ -57,8 +56,8 @@ public class Maze {
 
                         nodes.put(pos,node);
                     }
-                    else if(isNode(x,y))
-                    {
+                    else if(isNode(x,y)){
+
                         Point pos = new Point(x, y);
                         Node node = new Node(pos);
                         connectNode(node,x,y);
@@ -69,8 +68,8 @@ public class Maze {
         }
     }
 
-    private boolean isNode(int x, int y)
-    {
+    private boolean isNode(int x, int y){
+
         boolean left = false,right = false,up = false ,down = false;
         int trueCount = 0;
 
@@ -89,8 +88,8 @@ public class Maze {
 
     }
 
-    private void connectNode(Node node,int x, int y)
-    {
+    private void connectNode(Node node,int x, int y){
+
         //Up
         for (int i = y; i >= borderPad && processPixel(node, x, i,Direction.Up); i--) ;
 
@@ -104,8 +103,8 @@ public class Maze {
         for (int i = x; i <= orgImage.getWidth() - borderPad && processPixel(node, i, y,Direction.Right); i++) ;
     }
 
-    private boolean processPixel(Node node, int x, int y, Direction dir)
-    {
+    private boolean processPixel(Node node, int x, int y, Direction dir) {
+
         int pix = orgImage.getRGB(x, y);
         if (pix == borderColor)
             return false;
@@ -136,8 +135,8 @@ public class Maze {
         return true;
     }
 
-    public void drawNodes(Color nodeColor, Color endPointColor)
-    {
+    public void drawNodes(Color nodeColor, Color endPointColor){
+
         Color orgCol = imageGraphics.getColor();
         for (Node node : nodes.values())
         {
@@ -154,24 +153,23 @@ public class Maze {
         }
     }
 
-    public void drawLine(Color pathColor,Point p1,Point p2)
-    {
+    public void drawLine(Color pathColor,Point p1,Point p2){
+
         Color orgCol = imageGraphics.getColor();
         imageGraphics.setColor(pathColor);
         imageGraphics.drawLine(p1.x,p1.y,p2.x,p2.y);
         imageGraphics.setColor(orgCol);
     }
 
-    public void drawPixel(Point point, Color color)
-    {
+    public void drawPixel(Point point, Color color){
+
         Color orgCol = imageGraphics.getColor();
         imageGraphics.setColor(color);
         imageGraphics.fillRect(point.x, point.y, 1, 1);
         imageGraphics.setColor(orgCol);
     }
 
-    public void resetImage()
-    {
+    public void resetImage(){
         imageGraphics.drawImage(orgImage,0,0,null);
     }
 
@@ -179,8 +177,7 @@ public class Maze {
         return curImage;
     }
 
-    enum Direction
-    {
+    enum Direction{
         Up,Down,Left,Right
     }
 }
